@@ -1,0 +1,381 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+    position: fixed;
+    display: flex;
+    background-color: white;
+   
+    height: 60px;
+   
+}
+#head{
+    background-color: white;
+    width: 980px;
+    
+    /* header에 주지말고 그 안의 요소에 padding을 준다. */
+    padding: 20px;
+ 
+}
+
+.logo{
+    float: left;
+    margin-right: 10px;
+    font-size: 40px;
+    color: gray;
+}
+.logo i{
+    background-color: white;
+    width: 30px;    
+    /* img밑에 여백 없애는 코드 */
+    display: block; 
+  color: gray;
+}
+
+.logo a{
+    width: 30px;    
+    /* img밑에 여백 없애는 코드 */
+    display: block; 
+    text-decoration:  none;
+    color: gray;
+}
+
+
+
+.navBar {
+    background-color: white;
+    float: left;
+    display:flex;
+    height: 20px;
+    justify-content: end;
+    align-items: center;
+   
+    padding: 8px 12px;
+}
+
+
+.nav_menu{
+   
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav_menu li{
+    float: left;
+    margin-right: 10px;
+    padding: 8px;
+    font-weight: bold;
+  
+}
+
+.nav_menu a {
+    text-decoration:  none;
+    color: gray;
+}
+
+.main {
+    padding-top: 100px;
+}
+
+
+/* 슬라이더 */
+.swiper {
+    width: 90%;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom:50px ;
+ 
+    background-color: #f2f5f0;
+   
+
+  }
+
+  /* 슬라이더 안에 내용 디자인 */
+ h3{
+  display: flex;
+  padding-top: 20px;
+  font-size: 20px;
+  padding-left: 10%;
+  color: #000000;
+  margin-bottom: 45px;
+  margin-left: -2px;
+}
+
+
+
+
+
+
+.slider__info1,
+.slider__info2,
+.slider__info3{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: 70% 10%;
+
+}
+
+.slider__info1{
+  background-size: 250px 350px;
+  background-image: url(src/book2.jpg);
+}
+
+.slider__info2{
+  background-image: url(src/book1.jpg);
+}
+
+.desc{
+  padding-left: 10%;
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 70px;
+  font-weight: 300;
+  line-height: 1.5;
+
+}
+
+
+.slider__info1, .btn,
+.slider__info2 .btn,
+.slider__info3 .btn{
+  margin-top: 100px;
+  padding-left: 10%;
+}
+.slider__info1 .btn a,
+.slider__info2 .btn a,
+.slider__info3 .btn a{
+  display: inline-block;
+  color : white;
+  text-decoration-line: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #525252;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 4px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  
+  opacity: 0.5;
+  padding: 15px 5px;
+  border-radius: 20px;
+  color: black !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+  /* 메인 카테고리 시작 */
+
+  .mainCategory{
+    /* border: 1px solid red; */
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .keyword-rank{
+    /* border: 1px solid blue; */
+    flex-basis: 40%;
+  }
+
+  .mainCategory a{
+    text-decoration:  none;
+    color: #000000;
+  }
+
+  li a:hover{
+    font-weight: 700;
+
+  }
+
+  .item {
+    display: flex;
+    /* border: 1px solid blue; */
+    flex-basis: 50%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #box {
+    padding: auto;
+    flex-basis: 30%;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 100px auto;
+    transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    text-align: center;
+  }
+  
+  #box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-10px);
+  }
+
+  #box .img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+  }
+
+  #box h1 {
+    font-size: 20px;
+  }
+
+  #box .date{
+    font-size: 13px;
+  
+  }
+
+  #box .texts {
+    font-size: 15px;
+  }
+
+  
+   div.keyword-rank > h2{
+    margin-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: black;
+    font-family: initial;
+  }
+
+  div.keyword-rank > ul > li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 20px;
+  }
+
+
+
+  /* 장르별 목록 */
+
+  .bookList {
+    border-top: 2px solid #dae0d6 ;
+    
+    margin-top: 50px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    
+    
+  }
+
+  .bookList_wrap {
+   display: flex;
+   width: 100%;
+   align-items: flex-start;
+
+   
+   
+  }
+
+  .list_title{
+    margin-left: 20px;
+    font-size: large;
+    
+  }
+
+
+/* 탭 */
+.title_tab {
+    /* margin-top: 50px; */
+    /* padding-bottom: 40px; */
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    width: 700px;
+    flex-basis: 100%;
+    margin-top: 10px;
+    }
+  
+  /* 탭 스타일 */
+  .tab_item {
+    width: calc(100%/4);
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #777;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.35;
+  }
+
+
+input[name="tab_item"] {
+    display: none;
+  }
+
+  
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /* 선택 된 탭 콘텐츠를 표시 */
+  #all:checked ~ #all_content,
+  #programming:checked ~ #programming_content,
+  #design:checked ~ #design_content ,
+  #eBooK:checked ~ #eBooK_content{
+    display: flex;
+  }
+  
+  /* 선택된 탭 스타일 */
+  .title_tab input:checked + .tab_item {
+    /* background-color: #333333; */
+    color: black;
+    
+  }
+
+  #box {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 100px auto;
+    transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+  }
+  
+  #box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-10px);
+  }
+  
+
+  /* 오늘의 추천 */
+
+
+
+  .bookBox img{
+    justify-content: space-around;
+    
+    width: 200px;
+    height: 250px;
+    margin: 40px;
+  }
